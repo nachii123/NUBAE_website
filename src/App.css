@@ -1,0 +1,88 @@
+/* App styles are handled by Tailwind CSS and component styles */
+
+/* Professional eCommerce Layout Styling */
+
+/* Shop Section - Full Height Container */
+#shop {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+#shop > div {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Left Sidebar - Fixed on Desktop */
+#shop > div > div:first-child {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+/* Right Products Area - Scrollable */
+#shop > div > div:last-child {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for products container */
+#shop > div > div:last-child::-webkit-scrollbar {
+  width: 8px;
+}
+
+#shop > div > div:last-child::-webkit-scrollbar-track {
+  background: #FAF8F3;
+}
+
+#shop > div > div:last-child::-webkit-scrollbar-thumb {
+  background: #A89968;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+#shop > div > div:last-child::-webkit-scrollbar-thumb:hover {
+  background: #8B9B8F;
+}
+
+/* Firefox scrollbar */
+#shop > div > div:last-child {
+  scrollbar-width: thin;
+  scrollbar-color: #A89968 #FAF8F3;
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  #shop {
+    min-height: auto;
+    flex-direction: column;
+  }
+
+  #shop > div {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #shop > div > div:first-child {
+    position: static;
+    width: 100%;
+  }
+
+  #shop > div > div:last-child {
+    overflow-y: visible;
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  #shop {
+    min-height: auto;
+  }
+
+  #shop > div > div:last-child {
+    padding: 1rem !important;
+  }
+}
