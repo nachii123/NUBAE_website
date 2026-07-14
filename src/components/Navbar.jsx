@@ -38,10 +38,34 @@ const Navbar = ({ onCartClick, cartCount, onSearchClick }) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
-            className="text-2xl font-display font-bold tracking-tight"
+            className="flex items-center"
             whileHover={{ scale: 1.05 }}
           >
-            NUBAE
+            <svg
+              width="180"
+              height="48"
+              viewBox="0 0 220 60"
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-10 w-auto"
+              role="img"
+              aria-label="NUBAE"
+            >
+              <circle cx="30" cy="30" r="18" fill="#C9A46A" />
+              <path
+                d="M22 30C22 24 27 19 33 19C35 19 37 20 39 21C36 21 33 23 33 27C33 31 36 33 39 33C37 39 32 41 27 41C24 38 22 35 22 30Z"
+                fill="white"
+              />
+              <text
+                x="60"
+                y="37"
+                fontFamily="Cormorant Garamond, serif"
+                fontSize="28"
+                fill="#2B2B2B"
+                letterSpacing="3"
+              >
+                NUBAE
+              </text>
+            </svg>
           </motion.div>
 
           {/* Desktop Menu */}
